@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>The expected income level after retirement and age groups.</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</head>
+
+<body>
+<!-- Make sure that the knitr package is installed and loaded. -->
+
+<!-- For more info on the package options see http://yihui.name/knitr/options -->
+
+<!-- Replace below with the title of your project -->
+
+<h3>The expected income level after retirement and age groups.</h3>
+
+<p><strong>Research Question</strong> : Is there any difference in expected income level after retirement among different age groups living in metropolitan Seoul area?</p>
+
+<p><a href="https://drive.google.com/file/d/0By_uRJx10HlgVXEtaVhjRE9RMG8/edit?usp=sharing">Data download here(.RData)</a></p>
+
+<p><a href="https://drive.google.com/file/d/0By_uRJx10HlgVXEtaVhjRE9RMG8/edit?usp=sharing">Data download here(Google fusion table)</a></p>
+
+<p><a href="https://docs.google.com/document/d/18Qmyv8tloavUINEsG2jrvMhue2KDDm2lRQpJSByzJSo/edit?usp=sharing">Data codebook download here</a></p>
+
+<!-- In the remainder of the document, add R code chunks as needed -->
+
+<h3>Introduction:</h3>
+
+<p>In the way of searching what item is suitable for DASI project, I found the offical public data service of Seoul and they gathered every year the survey data with great amount.</p>
+
+<p>while I reviewed the questionaire, I saw a question about how is <em>appropriate</em> for your income after retirement. </p>
+
+<p>for me this question was very interesting. when I was studying at the college, my economics professor asked us whose time is more valuable between you and me?</p>
+
+<p>then I strongly said, &ldquo;without a doubt, it&#39;s me. because what I will be is uncertain, so the unrealized wealth could reach countless amounts.&rdquo; because I was so serious about my opinion, my professor just laughed.</p>
+
+<p>Young guys generally tend to have ambitious dream, I would like to find out that through this data.</p>
+
+<p>we can see the difference in expected income level after retirement between the age groups, such as between younger generations between 20 to 40 and the elderly generations over 60, both of whom are currently living in Metropolitan Seoul area.</p>
+
+<h3>Data:</h3>
+
+<p>These data are gathered through market survey by Seoul Metropolitan Administration Head Quarter.
+They outsourced this survey to the professional marketing research company listed below.
+and they conducted this survey in 2011.
+most of the data are surveyed by face to face interviews.</p>
+
+<p>The sample was randomly seleted from the population of interest without any assignment, so it&#39;s an observational study. And, expected income after retirement is a categorical variables according to the analysis below.</p>
+
+<p>This data set was not designed to experiments. so they could not used for the causal links with confidence.</p>
+
+<p><strong>1. Research institutions</strong></p>
+
+<ul>
+<li>Seoul Metropolitan Administration HQ 
+ (Information Planning Division)</li>
+</ul>
+
+<p><strong>2. Performing institutions (in Korea)</strong>
+   1) World Research Inc. (02) 583-2482 
+   2) Millward Brown Media Research Inc. (02) 3488-2784</p>
+
+<p><strong>3. Main Features of Seoul survey.</strong></p>
+
+<p>1) Every year , Seoul conducts &ldquo;Seoul Survey 
+(Seoul City policy indicators survey).</p>
+
+<p>2) This survey will be used as the basis for policy-making.</p>
+
+<p>3) This statistical survey is based on Article 18 of the Statistics Act approved by the government statistics office , and the responses are not used for except the purposes designated according to Article 33 of the Statistics Act of Korea. Personal secret would be strictly protected.</p>
+
+<p>4) This survey is for more than 15 years old of All household 
+members without exception living in seoul</p>
+
+<p><strong>4. Data link</strong></p>
+
+<p>I retrived my dataset from this official site of <a href="http://data.seoul.go.kr">Seoul&#39;s open public data square</a>. but I couldn&#39;t pinpoint the exact URL of the page I had got this dataset. </p>
+
+<p>If you want to access to that, you should have to make your ID first and after that, do a lot of things such as searching in Korean etc.</p>
+
+<p>because we just started public data service, It might be difficult to get into account about servicing for foreigners, I think.</p>
+
+<p>but for capturing the reliability of my dataset, I will link the captured image of the <a href="https://drive.google.com/file/d/0By_uRJx10HlgM0wyUnA0bzRESzQ/edit?usp=sharing">exact page of my dataset</a></p>
+
+<h3>Exploratory data analysis:</h3>
+
+<p>the expected income after retirement(mydata$income) has 7 levels and the age groups(mydata$age) has 6 levels respectively.</p>
+
+<p>1) income/month (Categorical variable)</p>
+
+<ol>
+<li>Less than 500,000won (as of today&#39;s exchange rate : $473)</li>
+<li>between 500,000 and 1,000,000won  ($473 - $946)</li>
+<li>between 1,000,000 and 2,000,000won ($946 - $1,892)</li>
+<li>between 2,000,000 and 3,000,000won ($1,892 - $2,838)</li>
+<li>between 3,000,000 and 4,000,000won ($2,838 - $3,784)</li>
+<li>between 4,000,000 and 5,000,000won ($3,784 - $4,730)</li>
+<li>over 5,000,000won                  ($4,730 -       )</li>
+<li>Do not know / no answer</li>
+</ol>
+
+<p>2) Age group (Categorical Variable)</p>
+
+<ol>
+<li>10 ~ 19 years</li>
+<li>20 ~ 29 years</li>
+<li>30 ~ 39 years</li>
+<li>40 ~ 49 years</li>
+<li>50 ~ 59 years</li>
+<li>over 60 years</li>
+</ol>
+
+<pre><code class="r">income &lt;- seoul$Q28
+age &lt;- seoul$DD2
+mydata &lt;- cbind(income, age)
+</code></pre>
+
+<p>Total sample size is 45,605. and the counting unit is family member, individuals</p>
+
+<ul>
+<li><p>20,000 households randomly selected by the survey company are surveyed </p></li>
+<li><p>but current data is gathered to the family members individually. so the total number of cases could reach 45,604. </p></li>
+<li><p>and for your convenicence, the total number of citizens reside in Seoul is over 10 millions</p></li>
+</ul>
+
+<pre><code class="r">dim(mydata)
+</code></pre>
+
+<pre><code>## [1] 45605     2
+</code></pre>
+
+<pre><code class="r">head(mydata, n = 10)
+</code></pre>
+
+<pre><code>##       income age
+##  [1,]      7   4
+##  [2,]      3   4
+##  [3,]      3   6
+##  [4,]      3   5
+##  [5,]      7   5
+##  [6,]      3   5
+##  [7,]      3   2
+##  [8,]      7   2
+##  [9,]      3   2
+## [10,]      7   4
+</code></pre>
+
+<pre><code class="r">summary(mydata)
+</code></pre>
+
+<pre><code>##      income          age      
+##  Min.   :1.00   Min.   :1.00  
+##  1st Qu.:3.00   1st Qu.:3.00  
+##  Median :4.00   Median :4.00  
+##  Mean   :4.63   Mean   :3.81  
+##  3rd Qu.:7.00   3rd Qu.:5.00  
+##  Max.   :7.00   Max.   :6.00
+</code></pre>
+
+<p>I can find some negative relation between income and age through boxploting.</p>
+
+<pre><code class="r">boxplot(income ~ age, data = mydata, main = &quot;boxplot for each age group&quot;, xlab = &quot;age group&quot;, 
+    ylab = &quot;expected income/month after retirement&quot;)
+</code></pre>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAFoCAMAAABJ+DwrAAAAkFBMVEX9/v0AAAAAADkAAGUAOTkAOWUAOY8AZo8AZrU5AAA5ADk5AGU5OWU5OY85ZrU5j485j9plAABlADllAGVlOQBlOTllOY9lZjlltbVltf2POQCPOTmPOWWPZgCPjzmPtY+P29qP2/21ZgC1tWW124+1/rW1/v3ajzna24/a/rXa/v39tWX924/9/rX9/tr9/v30K+1RAAAAMHRSTlP//////////////////////////////////////////////////////////////wBipdB4AAAACXBIWXMAAAsSAAALEgHS3X78AAARCElEQVR4nO2dD3/bttVGx6R1rbbZpLhbJ6fram2x1ujf9/92I0hKlm0KBEhciHx0zm9v41eynguSJ8wVRIF/OQAI8ZdrDwAgJQgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAgNUiA0SIHQIAVCgxQIDVIgNEiB0CAFQoMUCA1SIDRIgdAgBUKDFAjdyv7x43PHr+wWr35ltaz/3M6KD09pK0EECN1KtNCrYvnmh3SVIAKEbqXU7D9Fcfet/HFdFMXcnXk/Pu8fi2X9TClhLXT9bPlEUdxXryuqlzUv2j9++PV4wnYPOdc35Z/uIferZUKZ999ZcZT67MmPXxeu/vFl9ajqR4+xpyrVcNzjzdhuGIRupRKzUnNV/XBfnXo35Z+nZyqhm2ffCn180dHvw6H5zXkpXv3yOqf6S9IUOBxeP/nd7FR+/jIo9+i7Kiehj6O+XRC6lVIN596Hp+2sPBO6H8r/fDerzqi1lUsn9Muzr1qO08PlL9emlg+Vmh3bi/ql1d+HZZVXPdtwenJdmvnqZadH69izKi9C12PLvbtGBEK3UjvUnJTdv/vLqh1YHp9ZF3Mn3suzr4Q+PVz2Bs0bxE117qzaCXcadi89nnYrLY9CH5+8P1QPnr3scDg9WseeVXlpOeqxZd1X4wKhW2kTev3SsA4QejurW41Nc+4+2ej+n1dPInQfELqVlpZjO/vBeRTZchyFPjUV66rDOHUV81dCv3myaTmOnLUcLva8sVkeWxFajmsPYJy8f1PoJNrOzt54nb8prN7z1WfcyuzzFzWJq+Zl9Tn3+GbQ/Xkm9Ksnz94U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" alt="plot of chunk unnamed-chunk-4"/> </p>
+
+<h3>Inference:</h3>
+
+<ol>
+<li><p>Choosing Inference method</p>
+
+<p>1) the dataset has two categorical variables with multiple levels respectively. so, I tried the chisquare indepence test.</p>
+
+<p>2) but both of the variables are categorical with ordered levels, plus for curiousity and comparison purpose, I also put the dataset into ANOVA. and figured the difference out between them.</p></li>
+<li><p>Condition checking passed.</p>
+
+<p>1) Independence : random sample size is less than 10% of population, the citizens of Seoul. and each data serve to only one segment.</p>
+
+<p>2) Sample size : each of the level has more than 5 sample.</p></li>
+<li><p>Hypothesis setting</p>
+
+<p>1) H_null : agegroups and the expected income level after retirement are \( indpendent \)</p>
+
+<p>2) H_alternative : agegroups and the expected income level after retirement are \( dependent \)</p></li>
+</ol>
+
+<pre><code class="r">source(&quot;inference.R&quot;)
+inference(y = as.factor(mydata[, 1]), x = as.factor(mydata[, 2]), est = &quot;proportion&quot;, 
+    type = &quot;ht&quot;, alternative = &quot;greater&quot;, method = &quot;theoretical&quot;)
+</code></pre>
+
+<pre><code>## Warning: package &#39;BHH2&#39; was built under R version 3.0.3
+</code></pre>
+
+<pre><code>## Response variable: categorical, Explanatory variable: categorical
+## Chi-square test of independence
+## 
+## Summary statistics:
+##      x
+## y         1     2     3     4     5     6   Sum
+##   1       7    18    30    44    46   212   357
+##   2     130   226   470   477   632  1254  3189
+##   3    1090  1979  3792  4790  3458  3907 19016
+##   4     251   359   489   598   444   181  2322
+##   5     131   125   144   194   122    69   785
+##   6     351   741  1191  1346  1016   560  5205
+##   7    1481  2346  3404  3944  2525  1031 14731
+##   Sum  3441  5794  9520 11393  8243  7214 45605
+</code></pre>
+
+<pre><code>## H_0: Response and explanatory variable are independent.
+## H_A: Response and explanatory variable are dependent.
+## Check conditions: expected counts
+##    x
+## y         1       2       3       4       5       6
+##   1   26.94   45.36   74.52   89.19   64.53   56.47
+##   2  240.62  405.15  665.70  796.67  576.40  504.45
+##   3 1434.80 2415.93 3969.57 4750.56 3437.10 3008.03
+##   4  175.20  295.00  484.72  580.08  419.70  367.30
+##   5   59.23   99.73  163.87  196.11  141.89  124.17
+##   6  392.73  661.28 1086.54 1300.31  940.79  823.35
+##   7 1111.49 1871.54 3075.08 3680.09 2662.59 2330.21
+## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  y_table
+## X-squared = 3799, df = 30, p-value &lt; 2.2e-16
+</code></pre>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAEgCAMAAACq87QqAAAAjVBMVEX9/v0AAAAAADkAAGUAOY8AZrU5AAA5ADk5AGU5OQA5OWU5OY85ZmU5ZrU5j7U5j9plAABlADllAGVlOY9lZmVlZrVltf2POQCPOTmPOWWPZmWPZo+P29qP2/21ZgC1Zjm1ZmW1j4+1/rW1/v3ajzna29ra/rXa/tra/v379b79tWX924/9/rX9/tr9/v2/tI0cAAAAL3RSTlP/////////////////////////////////////////////////////////////AFqlOPcAAAAJcEhZcwAACxIAAAsSAdLdfvwAAApgSURBVHic7d1rQ9vGFkbhCopPeoWE1qEXO2nh9HB80f//ebWMnBQK0Wj2q9nM1lofasDathwexFi48FVLFKivvHeASBmgKVSAplABmkIFaAoVoClUgKZQ5YHe/fzl67eLs9WoG9w0Iweeaf/Lbf7wdtEsp56gAmWB3i4uvrzBh9VmYIsn/bfdmHVszg2gx9/9B/NXIE3QNEfo8UBMGo/tf/vVcBN3Y79F7G++sX9TIXkTgR4W/7TtD1l78rnN8qPpa2LkLu9vVuMfJE3eNKB370ba+mDXcdc045Y5xh0Q7DLpmwb0eiyu0c8in8tyhB6/A5JdJnWctqNQAfrV1XjvQNUB+tUFaEsDoHdXzSHzKTUaEaAtDR2hH/34rXmul6/J2WyCYevNjJwyf0oAbamiJcdoiVaaj6b+nxigfasItGuAriRApwXoShoF+uXvyOEDdCWNA/3iJ3Cq9ati2HozI6fMnxJAWxoCfdec33460/EF0GkHruTjnHDYejPFfQHa0tB56Ov73dvfAV0yQFsaBt3ub74FdMEAbWlwyXHRtts3gC4YoC2pnhROg0kxbL0ZnhRWlei0XXzQ4za3BGhLoh+sJB64AJ3yb2m+hTlX9ieFNtDmsvahPGhEGyoM2iJRtQ+Ajtz8XssB6NCpnhQWPciaAnToyp62M5W7Xnn6tTeKM6Arq/B56JISc3fVNgVo32b4g5Vpv5oA7dv8QOcF6EoCdP5Dl99Jf1eANgTo/Icuv5P+rgBtCND5D11+J/1dAdrQ/EDzpDB0MwQ97RSgfQO0eArQvgFaPAVo3wAtngK0b4AWTwHaN0CLpwDtG6DFU4D2DdDiKUD7BmjxFKB9A7R4CtC+AVo8BWjfAC2eArRvgBZPAdo3QIunAO0boMVTgPYN0OIpQPsGaPEUoH0DdOLUuP/BxRKgLQ3/0aDvF82yf2fGoAsGaEvDf2Plw6r9yJ+kKBigLSX80aAW0EUDtKXBJcdl264v+3dmDJo1dCXxpFA8BWjfAC2eArRvgBZPAdo3QIunAO0boMVTgPYN0OIpQPsGaPEUoH0DtHgK0L4BWjwFaN8ALZ4CtG+AFk8B2jdAi6cA7RugxVOA9g3Q4ilA+wZo8RSgfQO0eArQvgFaPAVo3wAtngK0b4AWTwHaN0CLpwDtG6DFU4D2DdDiKUD7BmjxFKB9A7R4CtC+AVo8BWjfAC2eArRvgBZPAdo3QIunAO3bONAv/nJCQD/e3BKgLY0C/XKAfry56d8S0IYALZ4CtG+AFk8B2jfW0OIpQPumOsuR9ovtAZ3yrwxoQyLQhhvQm9LeDKCrCtDiKUD7BmjxFKB9SwC9/eH0Fmvo1M0tAdrS0N8pvOownvN3CgFdSYNH6APpi9PbgE7d3BKgLfHiJPEUoH0DtHgK0L4BWjwFaN8ALZ4CtG+AFk8B2rfCL07KLO0+Evdh2ilA+1b25aPT3kfaPgA6dIAWTwHaNxXotFXDxPcxycoF0FUlAp2YSaJqHwAdOdGTwtQbGIlJhsSwD4CuqiPo3dXFC1fvru/vmmbZv+f78lFRgA5df4TeNM3Z6pmrd9d//dy2HwdfbZeY7Ty0uax9AHRVfV5y7N9/PhR/KhX0RJjyTGlvBtBV1YPeLroj9O7d7dPrt4uz1fqyf4efFKZubgnQlvo19Nf3KRvHAD3tQgXQvs3vtRx5AbqSVK/lqGcNnRegK6nwD1YsEgFNw1X0k0LW0DRcWdCmOMtBw5VdQ5sCNA1X9iyHqdFrBePiYdwD1D1QQFsqfNrOIlEUoENX0XloUYAOHaDFew5o3ypacuQOP72ZUZwBXVk1PSkc5TB/V21TgPZtCPTdZdIL/AH9eHPT4wS0oaFfp3v91/V9yuuhp/88y5Yc0y5UAO3bAOj9b/d/CEGbJLoG6EoaWnJsF41wyfEaznLkBehKmt9pu7wAXUnzA80aOnQVgc5dgOfSzNtzQPtWE+i8YevNALqqZgiaJUfk5gc6L0BXEqDzH7r8Tvq7ArQhQOc/dPmd9HcFaEOF/ySFRSJraBqu7G/wfxWgp50CtG+AFk8B2jdAi6cA7dsM19DTTgHaN9VZDvFTK5Mp7c0AuqpEoA03oDelvRlAVxWgxVOA9g3Q4ilA+8YaWjwFaN/m96NvQIcO0OIpAegW0fkBWjwFaN9q+lVgoxzm76ptCtC+8avAxFOA9q0m0ObSdjXvAeoeKKAtVQRaFKBDB+i0PQd0JVX0pFAUoENX0Wk7UYAOXUWgfZ8UlvtuAmhLNYHOG7beTHFdgLYE6LSpggHa0gxBZy1UCgZoS/MDnRdr6EoCdP5Dl99Jf1eANgTo/Icuv5P+rgBtaH6g89bQgK6kGYKedgrQvgE6cYonhXUE6LSpggHaEqDTpgoGaEuATpsqGKAtATpxijV0HQFaPAVo3wCdOMURuo4AnTZVMEBbAnTaVMEAbQnQaVMFA7QlQCdOsYauI0CLpwDtG6DFU4D2DdDiKUD7NgB6d9UsP78H6NTNLQHa0hDo6/t105zfPrwH6NTNLQHa0jDof7wH6NTNLQHaEmto8RSgfQO0eArQvgFaPAVo3wAtngK0b4AWTwHaN0CLpwDtG6DFU4D2DdCJU7zaro4AnTZVMEBbAnTaVMEAbQnQaVMFA7QlQCdOsYauI0CLpwDtG6DFU4D2DdDiKUD7BmjxFKB9A7R4CtC+AVo8ZcbYtIA2BGjxFKB9A7R4CtC+AVo8BWjfAC2eArRvgBZPAdo3QIunAO0boMVTCtCIzg/Q4ilA+wZo8RSgfQO0eArQvgFaPAVo3wAtngK0b4AWTwHaN0CLp3Ispv8Pi/RigJ5mioOrb4AWTwHaN0CLpwDtG6DFU4D2DdDiKUD7BmjxFKB9Gwf6xdMliWdVTKdkcoetNzNySvapoZxGgabpG/31Ntue//cD9CuLI3xigK4jQCcG6DoCdGKAriNAJwboOgJ0YoCuI0AnBug6AnRigKY5BGgKFaApVICmUAGaQgVoChWgKVSAplABmkIFaAoVoOnVtmma89v27vj/pyzb7aJ773TRHt86fPh4/eEj/ccBTa+17ZuD5ovjm5uv73dXy/bu08XhY7u3q3b7n1W7XnZbnK6uGfT68vR4KWod6t7ud/fdZX9x+OCm+9yvl/ub1XHD/uqaQe/e/fnu1nsnaNIejljdf/8Fuuvw1u7qYUESAPRh9XTpvQs0ZdvFWUf3CPi4pjhb9RcP1+/fXx5XHYej9OnqqkF3j4VCd7S8Oa6ZD8/6fjwsL/qL45VXpwPaenn6eNWg1z+xhI5e95RvfXK7e1hi9hfbxfKfWz18vGbQ2+/+d8MhOm7dgbk7Qj887eveOqyl+4v2k+duq/0vt6erKwa9f7/svxlRzO6aplst988BN03TfbYfLrZvbk/np/ut+qsrBk307wBNoQI0hQrQFCpAU6gATaECNIUK0BQqQFOoAE2hAjSFCtAUKkBTqABNoQI0hQrQFCpAU6gATaECNIUK0BQqQFOoAE2hAjSFCtAUKkBTqABNoQI0hQrQFCpAU6gATaECNIXqbzvsNMExhX+IAAAAAElFTkSuQmCC" alt="plot of chunk unnamed-chunk-5"/> </p>
+
+<h3>Conclusion:</h3>
+
+<p>The test statistic X<sup>2</sup> is very large and the p-value is nearly 0.
+this means that if we conditioned H_null is true, this dataset shows themself are extremely rare. accordingly, we can reject null hypothesis.</p>
+
+<p>so we can conclude agegoups and the expected income after retirement are <strong>dependent</strong>.</p>
+
+<p>The sample was randomly seleted from the population of unterest without any assignment, so it&#39;s an observational study. And, expected income after retirement is a categorical variables according to the analysis below - how do you calculate its mean?</p>
+
+<h3>Supplementary comparison with ANOVA by use of same dataset.</h3>
+
+<p>p-value is same as X<sup>2</sup> test. and I can see the result of paited test.</p>
+
+<pre><code class="r">inference(y = mydata[, 1], x = as.factor(mydata[, 2]), est = &quot;mean&quot;, type = &quot;ht&quot;, 
+    alternative = &quot;greater&quot;, method = &quot;theoretical&quot;)
+</code></pre>
+
+<pre><code>## Response variable: numerical, Explanatory variable: categorical
+## ANOVA
+## Summary statistics:
+## n_1 = 3441, mean_1 = 5.135, sd_1 = 1.876
+## n_2 = 5794, mean_2 = 5.063, sd_2 = 1.89
+## n_3 = 9520, mean_3 = 4.832, sd_3 = 1.915
+## n_4 = 11393, mean_4 = 4.776, sd_4 = 1.904
+## n_5 = 8243, mean_5 = 4.591, sd_5 = 1.922
+## n_6 = 7214, mean_6 = 3.616, sd_6 = 1.721
+</code></pre>
+
+<pre><code>## H_0: All means are equal.
+## H_A: At least one mean is different.
+## Analysis of Variance Table
+## 
+## Response: y
+##              Df Sum Sq Mean Sq F value Pr(&gt;F)
+## x             5  10021    2004     568 &lt;2e-16
+## Residuals 45599 160805       4               
+## 
+## Pairwise tests: t tests with pooled SD 
+##        1  2      3  4  5
+## 2 0.0762 NA     NA NA NA
+## 3 0.0000  0     NA NA NA
+## 4 0.0000  0 0.0336 NA NA
+## 5 0.0000  0 0.0000  0 NA
+## 6 0.0000  0 0.0000  0  0
+</code></pre>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAADYCAMAAAD1RSTqAAAAkFBMVEX9/v0AAAAAADkAAGUAOTkAOWUAOY8AZrU5AAA5ADk5AGU5OWU5OY85ZrU5j9plAABlADllAGVlOQBlOY9lZmVltf2POQCPOTmPOWWPZgCPjzmPj2WPj7WPtY+P27WP29qP2/21ZgC1Zjm1ZmW124+1/v3ajzna24/a/tra/v379b79tWX924/9/rX9/tr9/v2HmojPAAAAMHRSTlP//////////////////////////////////////////////////////////////wBipdB4AAAACXBIWXMAAAsSAAALEgHS3X78AAAKhUlEQVR4nO2dDXvaNhRG63QLWdbB2g6y74VtYcvMx///d7NsGRzA+OoqujjqOU/3lIBeQ65OFOHOl3c7gIx4d+0XAPCaIDRkBUJDViA0ZAVCQ1YgNGTFRaELiMdqJqHmstBWryJjqKEtCJ0YamhLJfRmNu15kMm4hGw7QQ1tcUJ//LmYn32QybhAsRMViBraUgv9tFsW75869/a9oQl/J5RL4pRUQvMTEIUX2m08XjrtOBX6PxlFdolTEHqU7IU+B0JfKt3lBby3hq8egC5hZznGKduVhJaB0LYgtCyhBqFtQWhZQg1C24LQsoQahLYFoWUJNQhtC0LLEmoQ2haEliXUILQtCC1LqEFoWxBallCD0LYgtCyhBqFtQWhZQg1C24LQsoQahLYFoWUJNQhtC0LLEmoQ2haEliXUILQtCC1LqEFoWxBallCD0LYgtCyhBqFtQWhZQg1C2+KEXt/Nt4uiuH0+fhChL5WOawrHSCX0djHfLeeV1x+OjT4V2qLFwBsRujhXoPPDgkDoKJqrvrcPjy+u/u5rS4HQnVrsEHqEuC1HtTyX092unBw/iNAXKofQo6R+U7islTrxmT00e+g3B2c5ZAk1CG0LQssSahDaFoSWJdQgtC0ILUuoQWhbEFqWUIPQtiC0LKEGoW1BaFlCDULbgtCyhBqEtgWhZQk1CG0LQssSahDaFoSWJdQgtC0ILUuoQWhbEFqWUIPQtiC0LKEGoW1BaFlCDULbgtCyhBqEtgWhZQk1CG0LQssSahDaFv/RyJsZbQwuJtQgtC2N0PUF3+vvjh9E6PgCI7QtjdB1Sw5JG4NRymYr9OVr1k+H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" alt="plot of chunk unnamed-chunk-6"/> </p>
+
+</body>
+
+</html>
+

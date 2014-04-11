@@ -1,0 +1,191 @@
+<!-- Make sure that the knitr package is installed and loaded. -->
+<!-- For more info on the package options see http://yihui.name/knitr/options -->
+
+<!-- Replace below with the title of your project -->
+
+### The expected income level after retirement and age groups.
+
+__Research Question__ : Is there any difference in expected income level after retirement among different age groups living in metropolitan Seoul area?
+
+
+[Data download here(.RData)](https://drive.google.com/file/d/0By_uRJx10HlgVXEtaVhjRE9RMG8/edit?usp=sharing)
+
+[Data download here(Google fusion table)](https://drive.google.com/file/d/0By_uRJx10HlgVXEtaVhjRE9RMG8/edit?usp=sharing)
+
+[Data codebook download here](https://docs.google.com/document/d/18Qmyv8tloavUINEsG2jrvMhue2KDDm2lRQpJSByzJSo/edit?usp=sharing)
+
+
+
+```{r echo=FALSE}
+load("2011_seoul_survey.RData")
+```
+
+<!-- In the remainder of the document, add R code chunks as needed -->
+
+### Introduction:
+
+In the way of searching what item is suitable for DASI project, I found the offical public data service of Seoul and they gathered every year the survey data with great amount.
+
+while I reviewed the questionaire, I saw a question about how is _appropriate_ for your income after retirement. 
+
+for me this question was very interesting. when I was studying at the college, my economics professor asked us whose time is more valuable between you and me?
+
+then I strongly said, "without a doubt, it's me. because what I will be is uncertain, so the unrealized wealth could reach countless amounts." because I was so serious about my opinion, my professor just laughed.
+
+Young guys generally tend to have ambitious dream, I would like to find out that through this data.
+
+we can see the difference in expected income level after retirement between the age groups, such as between younger generations between 20 to 40 and the elderly generations over 60, both of whom are currently living in Metropolitan Seoul area.
+
+### Data:
+
+These data are gathered through market survey by Seoul Metropolitan Administration Head Quarter.
+They outsourced this survey to the professional marketing research company listed below.
+and they conducted this survey in 2011.
+most of the data are surveyed by face to face interviews.
+
+The sample was randomly seleted from the population of interest without any assignment, so it's an observational study. And, expected income after retirement is a categorical variables according to the analysis below.
+
+This data set was not designed to experiments. so they could not used for the causal links with confidence.
+
+
+__1. Research institutions__
+
+   - Seoul Metropolitan Administration HQ 
+     (Information Planning Division)
+
+__2. Performing institutions (in Korea)__
+   1) World Research Inc. (02) 583-2482 
+   2) Millward Brown Media Research Inc. (02) 3488-2784
+
+__3. Main Features of Seoul survey.__
+
+   1) Every year , Seoul conducts "Seoul Survey 
+(Seoul City policy indicators survey).
+
+   2) This survey will be used as the basis for policy-making.
+   
+   3) This statistical survey is based on Article 18 of the Statistics Act approved by the government statistics office , and the responses are not used for except the purposes designated according to Article 33 of the Statistics Act of Korea. Personal secret would be strictly protected.
+
+   4) This survey is for more than 15 years old of All household 
+members without exception living in seoul
+
+__4. Data link__
+
+  I retrived my dataset from this official site of [Seoul's open public data square](http://data.seoul.go.kr). but I couldn't pinpoint the exact URL of the page I had got this dataset. 
+  
+  If you want to access to that, you should have to make your ID first and after that, do a lot of things such as searching in Korean etc.
+  
+  because we just started public data service, It might be difficult to get into account about servicing for foreigners, I think.
+  
+  but for capturing the reliability of my dataset, I will link the captured image of the [exact page of my dataset](https://drive.google.com/file/d/0By_uRJx10HlgM0wyUnA0bzRESzQ/edit?usp=sharing)
+  
+
+### Exploratory data analysis:
+
+the expected income after retirement(mydata$income) has 7 levels and the age groups(mydata$age) has 6 levels respectively.
+
+1) income/month (Categorical variable)
+   1. Less than 500,000won (as of today's exchange rate : $473)
+   2. between 500,000 and 1,000,000won  ($473 - $946)
+   3. between 1,000,000 and 2,000,000won ($946 - $1,892)
+   4. between 2,000,000 and 3,000,000won ($1,892 - $2,838)
+   5. between 3,000,000 and 4,000,000won ($2,838 - $3,784)
+   6. between 4,000,000 and 5,000,000won ($3,784 - $4,730)
+   7. over 5,000,000won                  ($4,730 -       )
+   9. Do not know / no answer
+   
+2) Age group (Categorical Variable)
+   1. 10 ~ 19 years
+   2. 20 ~ 29 years
+   3. 30 ~ 39 years
+   4. 40 ~ 49 years
+   5. 50 ~ 59 years
+   6. over 60 years
+
+```{r}
+income <- seoul$Q28
+age <- seoul$DD2
+mydata <- cbind(income, age)
+```
+
+Total sample size is 45,605. and the counting unit is family member, individuals
+
+- 20,000 households randomly selected by the survey company are surveyed 
+
+- but current data is gathered to the family members individually. so the total number of cases could reach 45,604. 
+
+- and for your convenicence, the total number of citizens reside in Seoul is over 10 millions
+
+```{r}
+dim(mydata)
+head(mydata,n=10)
+summary(mydata)
+```
+
+I can find some negative relation between income and age through boxploting.
+
+
+```{r fig.height=5,fig.width=10}
+boxplot(income ~ age, data = mydata,
+        main="boxplot for each age group", 
+        xlab="age group", 
+        ylab="expected income/month after retirement")
+```
+
+
+
+
+### Inference:
+
+
+1. Choosing Inference method
+
+   1) the dataset has two categorical variables with multiple levels respectively. so, I tried the chisquare indepence test.
+   
+   2) but both of the variables are categorical with ordered levels, plus for curiousity and comparison purpose, I also put the dataset into ANOVA. and figured the difference out between them.
+
+2. Condition checking passed.
+
+   1) Independence : random sample size is less than 10% of population, the citizens of Seoul. and each data serve to only one segment.
+   
+   2) Sample size : each of the level has more than 5 sample.
+   
+3. Hypothesis setting
+
+  1) H_null : agegroups and the expected income level after retirement are $indpendent$
+  
+  2) H_alternative : agegroups and the expected income level after retirement are $dependent$
+
+```{r fig.height=4,fig.width=10}
+source("inference.R")
+inference(y = as.factor(mydata[ ,1]), x = as.factor(mydata[ ,2]), 
+          est = "proportion", 
+          type = "ht",
+          alternative = "greater", method = "theoretical")
+```
+
+
+
+
+### Conclusion:
+
+The test statistic X^2 is very large and the p-value is nearly 0.
+this means that if we conditioned H_null is true, this dataset shows themself are extremely rare. accordingly, we can reject null hypothesis.
+
+so we can conclude agegoups and the expected income after retirement are __dependent__.
+
+
+The sample was randomly seleted from the population of unterest without any assignment, so it's an observational study. And, expected income after retirement is a categorical variables according to the analysis below - how do you calculate its mean?
+
+### Supplementary comparison with ANOVA by use of same dataset.
+
+p-value is same as X^2 test. and I can see the result of paited test.
+
+```{r fig.height=3, fig.width=10}
+inference(y = mydata[ ,1], x = as.factor(mydata[ ,2]), 
+          est = "mean", 
+          type = "ht",
+          alternative = "greater", method = "theoretical")
+```
+
+
